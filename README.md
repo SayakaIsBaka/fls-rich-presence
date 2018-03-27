@@ -24,3 +24,8 @@ Finally, you can just run `node index.js` if FL Studio is already running to hav
 ## Issues
 
 - Rich Presence stops displaying after ~1 hour
+
+## Credits
+
+- winprocess by Zysen: https://github.com/Zysen/node-winprocess
+- discord-rpc by snek: https://github.com/discordjs/RPC
