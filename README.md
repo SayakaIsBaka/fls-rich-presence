@@ -20,3 +20,7 @@ npm install
 
 You can run FL Studio with Rich Presence by dragging the FL Studio shortcut or executable to the VBS script, or you can make a shortcut of the VBS script: it takes the path to the FL executable as an argument. You can also modify existing FL Studio shortcuts by adding `path\to\project\folder\run.vbs` before the path to the executable.
 Finally, you can just run `node index.js` if FL Studio is already running to have Rich Presence for this session only.
+
+## Issues
+
+- Rich Presence stops displaying after ~1 hour
