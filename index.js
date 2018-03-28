@@ -46,7 +46,7 @@ rpc.on('ready', () => {
 	updateLoop();
 	setInterval(() => {
 		updateLoop();
-	}, 500);
+	}, 15000);
 });
 
 rpc.login(rp_id).catch(error => {
