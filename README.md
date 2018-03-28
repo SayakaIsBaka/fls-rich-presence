@@ -23,7 +23,7 @@ Finally, you can just run `node index.js` if FL Studio is already running to hav
 
 ## Issues
 
-- The script doesn't reconnect by itself, so you may have to re-run it by yourself if something bad happens (e.g. disconnecting from the Internet)
+- Rich Presence may stop displaying after some time
 
 ## Credits
 
