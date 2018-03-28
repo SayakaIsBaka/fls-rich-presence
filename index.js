@@ -27,12 +27,10 @@ function updateLoop() {
 			title = params[0];
     }
 
-    let time = new Date();
-
     rpc.setActivity({
         details: 'Editing:',
         state: title,
-        time,
+        startTimestamp: time,
 		largeImageKey: image_key,
         largeImageText: "FL Studio 12",
         instance: false,
@@ -43,9 +41,10 @@ function updateLoop() {
 
 rpc.on('ready', () => {
 	console.log(`Starting with rp_id ${rp_id}`);
-	updateLoop();
+	let time = new Date();
+	updateLoop(time);
 	setInterval(() => {
-		updateLoop();
+		updateLoop(time);
 	}, 15000);
 });
 
