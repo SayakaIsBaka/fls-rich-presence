@@ -7,7 +7,7 @@ let rpc = new discord.Client({
 	  transport: 'ipc'
 });
 
-function updateLoop() {
+function updateLoop(time, title_old) {
   let title = winprocess.getActiveWindowName(),
       params = title.match(".+?(?= - FL Studio [0-9]?[0-9]$)");
 
@@ -21,11 +21,14 @@ function updateLoop() {
 			if (pid64 == -1 && pid32 == -1)
 				process.exit();
 			else
-				return;
+				return title_old;
 		}
 		else
 			title = params[0];
     }
+	
+	if (title != title_old)
+		time = new Date();
 
     rpc.setActivity({
         details: 'Editing:',
@@ -37,14 +40,16 @@ function updateLoop() {
     }).catch(error => {
         console.error(error)
     });
+	
+	return title;
 }
 
 rpc.on('ready', () => {
 	console.log(`Starting with rp_id ${rp_id}`);
 	let time = new Date();
-	updateLoop(time);
+	let title = updateLoop(time, "");
 	setInterval(() => {
-		updateLoop(time);
+		title = updateLoop(time, title);
 	}, 15000);
 });
 
