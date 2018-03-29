@@ -46,11 +46,14 @@ function updateLoop(time, title_old) {
 
 rpc.on('ready', () => {
 	console.log(`Starting with rp_id ${rp_id}`);
+	setTimeout(function() {
+	console.log("timeout");
 	let time = new Date();
-	let title = updateLoop(time, "");
+	let title = updateLoop(time, winprocess.getActiveWindowName());
 	setInterval(() => {
+		console.log("update");
 		title = updateLoop(time, title);
-	}, 15000);
+	}, 15000)}, 7000);
 });
 
 rpc.login(rp_id).catch(error => {
