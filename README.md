@@ -9,6 +9,7 @@ Discord Rich Presence for FL Studio 12, ~~totally not adapted from [cemu-discord
 - Node.js 8 (https://nodejs.org/)
 - npm (should be included with Node.js)
 - Discord and FL Studio (do I really have to say why)
+- Powershell (to create the shortcuts, should be installed by default if you use Windows 7 SP1 or higher)
 
 ## Setup
 
@@ -18,12 +19,15 @@ cd fls-rich-presence
 npm install
 ```
 
-You can run FL Studio with Rich Presence by dragging the FL Studio shortcut or executable to the VBS script, or you can make a shortcut of the VBS script: it takes the path to the FL executable as an argument. You can also modify existing FL Studio shortcuts by adding `path\to\project\folder\run.vbs` before the path to the executable.
-Finally, you can just run `node index.js` if FL Studio is already running to have Rich Presence for this session only.
+Then, run `create_shortcut.bat` to create shortcuts to run FL Studio with Rich Presence; they will be placed on your Desktop and don't replace your existing shortcuts.
+
+(Technical note: I used a batch script to run the Powershell script to be able to bypass the execution policy, which is set to Restricted by default (Restricted mode doesn't let you run scripts))
 
 ## Issues
 
 - Rich Presence may stop displaying after some time
+
+If you encounter any issues during installation or after, please contact me at **Sayaka / 黒皇帝#9053** on Discord (I don't guarantee that I'll be able to help but I'll still try my best!)
 
 ## Credits
 
