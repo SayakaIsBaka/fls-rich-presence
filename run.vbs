@@ -1,5 +1,6 @@
 If WScript.Arguments.Length = 0 Then
-msgbox "No program given.", 0, "Error"
+    msgbox "No program given.", 0, "Error"
+    WScript.Quit
 End If
 
 Set WshShell = WScript.CreateObject("WScript.Shell")
@@ -8,7 +9,7 @@ WshShell.Exec WScript.Arguments(0)
 
 If Err Then
     Set objShell = CreateObject("Shell.Application")
-    objShell.ShellExecute WScript.Arguments(0), , ,"runas", 1
+    objShell.ShellExecute WScript.Arguments(0), , , "runas", 1
 End If
 
 WshShell.CurrentDirectory = CreateObject("Scripting.FileSystemObject").GetParentFolderName(WScript.ScriptFullName)
