@@ -5,7 +5,7 @@ Discord Rich Presence for FL Studio 12, ~~totally not adapted from [cemu-discord
 
 ## Requirements
 
-- git (https://git-scm.com)
+- git (https://git-scm.com) (Optional)
 - Node.js 8 (https://nodejs.org/)
 - npm (should be included with Node.js)
 - Discord and FL Studio (do I really have to say why)
@@ -14,7 +14,7 @@ Discord Rich Presence for FL Studio 12, ~~totally not adapted from [cemu-discord
 ## Setup
 
 ```bash
-git clone https://github.com/SayakaIsBaka/fls-rich-presence
+git clone https://github.com/SayakaIsBaka/fls-rich-presence (or download the repo and extract it)
 cd fls-rich-presence
 npm install
 ```
