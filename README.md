@@ -29,6 +29,10 @@ Then, run `create_shortcut.bat` to create shortcuts to run FL Studio with Rich P
 
 If you encounter any issues during installation or after, please contact me at **Sayaka / 黒皇帝#9053** on Discord (I don't guarantee that I'll be able to help but I'll still try my best!)
 
+## To Do
+
+Rewrite this in a more convenient language for the end user??? (maybe C#)
+
 ## Credits
 
 - winprocess by Zysen: https://github.com/Zysen/node-winprocess
