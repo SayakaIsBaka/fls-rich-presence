@@ -1,3 +1,5 @@
+### USE THIS INSTEAD: https://github.com/SayakaIsBaka/fls-rich-presence-cs
+
 # fls-rich-presence
 Discord Rich Presence for FL Studio 12, ~~totally not adapted from [cemu-discord-rich-presence](https://github.com/RedDuckss/cemu-discord-rich-presence)~~
 
